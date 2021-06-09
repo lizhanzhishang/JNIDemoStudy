@@ -1,0 +1,2 @@
+rootProject.name = "JNIDemoStudy"
+include ':app'
