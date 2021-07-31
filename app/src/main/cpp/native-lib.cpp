@@ -119,3 +119,13 @@ Java_com_analysis_jnidemostudy_MainActivity_getOnffice
     env->SetObjectField(jobject1,jfieldIdName,b);
     return jobject1;
 }
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_analysis_jnidemostudy_MainActivity_goByte(JNIEnv *env, jobject thiz, jbyteArray array) {
+   jsize _num_bytes = env->GetArrayLength(array);
+   jbyte* _data = static_cast<jbyte *>(malloc(_num_bytes));
+   env->GetByteArrayRegion(array, 0, (jsize)_num_bytes, (jbyte *)_data);
+
+    return env->NewStringUTF(reinterpret_cast<const char *>(_data));
+}

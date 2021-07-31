@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         sendString("dsadadadasdasdsad",user);
 
         Log.e("zyInfo", "---android.util.Log--- :"+new Gson().toJson(getOnffice(1,"zhuziyong")));
+        Log.e("zyInfo", "---android.util.Log--- :"+goByte("zhuziyong".getBytes()));
     }
 
     /**
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 //    public native String stringFromJNI(String[] array);
     public native String stringFromJNITest(String[] array);
     public native String stringFromJNIListTest(List<String> array);
+    public native String goByte(byte[] array);
     public native void sendString(String info,UserInfo user);
     public native UserInfo getOnffice(int a,String b);
 }
